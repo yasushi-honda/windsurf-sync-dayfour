@@ -9,7 +9,7 @@ export async function GET() {
       }
     })
     return NextResponse.json(results)
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to fetch results' }, { status: 500 })
   }
 }
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       }
     })
     return NextResponse.json(result)
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to save result' }, { status: 500 })
   }
 }
